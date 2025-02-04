@@ -7,6 +7,12 @@ Interpretation of the dataset
 ![image](https://github.com/user-attachments/assets/1fce2291-926c-4e30-ba8c-031d35d49a57)
 Data Transformation
 
+In order to see the creditability of the loans the chosen continuous variables from the data set is duration of credit months, credit amount and age in years.
+
+Then in order to see if the variables are normal or not histograms are plotted for each. It was identified that only credit amount is not normal, and therefore it is logged, in order to create a normal distributed histogram as shown in the right side:
+
+Other two continuous variables in which the duration of the month and age in years shows a normal distribution histogram, therefore it is not logged as shown in the right side.
+
 ![image](https://github.com/user-attachments/assets/d8428b47-ea2d-4b9b-a06e-2585a01f91b5)
 
 1. Decision Tree
