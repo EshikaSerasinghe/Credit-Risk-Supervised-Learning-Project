@@ -1,6 +1,6 @@
 Objective of the Analysis
 
-The main objective of this analysis is to specify the best best machine learning model and summary technique when applied to the german credit dataset "credit129" related to deciding the good and bad risk of people obtaining loans.The techniques which will be used are;
+The main objective of this analysis is to decide the best machine learning model when applied to the german credit dataset "credit129" related to deciding the good and bad risk of people obtaining loans.The techniques which will be used are;
 1) Decision Tree 2) Logistic Binary Regression 3) Discriminant Analysis (LDA- Linear Discriminant Analysis)
 
 Interpretation of the dataset
