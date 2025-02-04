@@ -1,0 +1,99 @@
+Column 1: Creditability,,,,,,,
+0 : good loans,,,,,,,Categorical
+1 : bad loans,,,,,,,
+,,,,,,,
+Column 2: Status of existing checking account,,,,,,,
+1 : ... < 0 DM,,,,,,,
+2 : 0 <= ... < 200 DM,,,,,,,Categorical
+3 : ... >= 200 DM / salary assignments for at least 1 year,,,,,,,
+4 : no checking account,,,,,,,
+,,,,,,,
+Column 3: Duration in month,,,,,,,Continuous
+,,,,,,,
+Column 4: Credit history,,,,,,,
+0 : no credits taken/ all credits paid back duly,,,,,,,Categorical
+1 : all credits at this bank paid back duly,,,,,,,
+2 : existing credits paid back duly till now,,,,,,,
+3 : delay in paying off in the past,,,,,,,
+4 : critical account/ other credits existing (not at this bank),,,,,,,
+,,,,,,,
+Column 5: Purpose,,,,,,,
+0 : car (new),,,,,,,
+1 : car (used),,,,,,,Categorical
+2 : furniture/equipment,,,,,,,
+3 : radio/television,,,,,,,
+4 : domestic appliances,,,,,,,
+5 : repairs,,,,,,,
+6 : education,,,,,,,
+7 : (vacation - does not exist?),,,,,,,
+8 : retraining,,,,,,,
+9 : business,,,,,,,
+10 : others,,,,,,,
+,,,,,,,
+Column 6: Credit amount,,,,,,,Continuous
+,,,,,,,
+Column 7: Savings account/bonds,,,,,,,
+1 : ... < 100 DM,,,,,,,
+2 : 100 <= ... < 500 DM,,,,,,,Categorical
+3 : 500 <= ... < 1000 DM,,,,,,,
+4 : .. >= 1000 DM,,,,,,,
+5 : unknown/ no savings account,,,,,,,
+,,,,,,,
+Column 8: Present employment since,,,,,,,Categorical
+1 : unemployed,,,,,,,
+2 : ... < 1 year,,,,,,,
+3 : 1 <= ... < 4 years,,,,,,,
+4 : 4 <= ... < 7 years,,,,,,,
+5 : .. >= 7 years,,,,,,,
+,,,,,,,
+Column 9: Installment rate in percentage of disposable income,,,,,,,categorical
+,,,,,,,
+Column 10: Personal status and sex,,,,,,,
+1 : male : divorced/separated,,,,,,,Categorical
+2 : female : divorced/separated/married,,,,,,,
+3 : male : single,,,,,,,
+4 : male : married/widowed,,,,,,,
+5 : female : single,,,,,,,
+,,,,,,,
+Column 11: Other debtors / guarantors,,,,,,,Categorical
+1 : none,,,,,,,
+2 : co-applicant,,,,,,,
+3 : guarantor,,,,,,,
+,,,,,,,
+Column 12: Present residence since,,,,,,,Categorical
+,,,,,,,
+Column 13: Property,,,,,,,
+1 : real estate,,,,,,,
+2 : if not 1 : building society savings agreement/ life insurance,,,,,,,Categorical
+"3 : if not 1/2 : car or other, not in attribute (column) 6",,,,,,,
+4 : unknown / no property,,,,,,,
+,,,,,,,
+Column 14: Age in years,,,,,,,Continuous
+,,,,,,,
+Column 15: Other installment plans,,,,,,,
+1 : bank,,,,,,,
+2 : stores,,,,,,,Categorical
+3 : none,,,,,,,
+,,,,,,,
+Column 16: Housing,,,,,,,
+1 : rent,,,,,,,
+2 : own,,,,,,,Categorical
+3 : for free,,,,,,,
+,,,,,,,
+Column 17: Number of existing credits at this bank,,,,,,,Categorical
+,,,,,,,
+Column 18: Job,,,,,,,
+1 : unemployed/ unskilled - non-resident,,,,,,,Categorical
+2 : unskilled - resident,,,,,,,
+3 : skilled employee / official,,,,,,,
+4 : management/ self-employed/,,,,,,,
+,,,,,,,
+Column 19: Number of people being liable to provide maintenance for,,,,,,,Categorical
+,,,,,,,
+Column 20: Telephone,,,,,,,
+1 : none,,,,,,,Categorical
+"2 : yes, registered under the customers name",,,,,,,
+,,,,,,,
+Column 21: foreign worker,,,,,,,
+1 : yes,,,,,,,Categorical
+2 : no,,,,,,,
