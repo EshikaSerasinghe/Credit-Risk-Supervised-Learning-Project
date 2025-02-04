@@ -1,0 +1,58 @@
+credit129.bkup <- credit129 
+str(credit129) 
+summary(credit129)
+sapply(credit129, sd) 
+xtabs(~Account.Balance + Creditability, data = credit129)
+credit129$Account.Balance <- factor(credit129$Account.Balance)
+logit <- glm(Creditability~ Credit.Amount + Age..years.+ Account.Balance, data = credit129, family = "binomial")
+summary(logit)
+confint(logit)
+
+
+library(aod)
+wald.test(b = coef(logit), Sigma = vcov(logit), Terms = 4:6)
+level <- cbind(0, 0, 0, 0, 1, -1)
+wald.test(b = coef(logit), Sigma = vcov(logit), L = level)
+exp(coef(logit))
+exp(cbind(OR = coef(logit), confint(logit)))
+
+#Predicted Probabilities (1)
+credit129.1 <- with(credit129, data.frame(Credit.Amount = mean(Credit.Amount), Age..years. = mean(Age..years.), Account.Balance = factor(1:4)))
+credit129.1$Account.Balance <- predict(logit, newdata = credit129.1, type = "response")
+credit129.1
+
+#Predicted Probabilities (2) credit amount
+credit129.2 <- with(credit129, data.frame(Credit.Amount = rep(seq(from = 250, to = 19000, length.out = 900),4), Age..years. = mean(Age..years.), Account.Balance = factor(rep(1:4, each = 100)))) 
+credit129.2
+
+#Predicted Probabilities (3)
+credit129.3 <- cbind(credit129.2, predict(logit, newdata = credit129.2, type = "link", se = TRUE)) # including standard error for CI later
+credit129.3 <- within(credit129.3, {
+  PredictedProb <- plogis(fit)
+  LL <- plogis(fit - (1.96 * se.fit))
+  UL <- plogis(fit + (1.96 * se.fit))
+})
+
+View(credit129.)
+
+#Predicted Probabilities PLOT (4)
+library(ggplot2)
+ggplot(credit129.3, aes(x = Credit.Amount, y = PredictedProb)) + 
+  geom_ribbon(aes(ymin = LL, ymax = UL, fill = 	Account.Balance), alpha = 0.2) + geom_line(aes(colour 		= Account.Balance), size = 1)
+
+attach(credit129...A)
+credit129...A$Creditability<- factor(credit129...A$Creditability)
+log.Credit.Amount <- log(credit129...A$Credit.Amount)
+credit129...A<- data.frame(credit129...A, log.Credit.Amount)
+credit129...A<-credit129...A[ ,-6]
+
+library(MASS)
+credit129...A.lda<-lda(Creditability~., data=credit129...A, prior=c(1,1)/2)
+credit129...A.lda
+credit129...A.lda.predict<-predict(credit129...A.lda)
+.table<-table(credit129...A$Creditability,data=credit129...A.lda.predict$class)
+addmargins(.table)
+round(addmargins(prop.table(.table,1)*100,2),2)
+ncorrect<-sum(diag(.table))
+ntotal<-sum(.table)
+cat(ncorrect," correctly allocated out of ",ntotal," (",100*ncorrect/ntotal,"%)","\n")
