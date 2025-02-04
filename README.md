@@ -9,7 +9,8 @@ Data Transformation
 
 ![image](https://github.com/user-attachments/assets/d8428b47-ea2d-4b9b-a06e-2585a01f91b5)
 
-1. Decision Tree 
+1. Decision Tree
+   
 ![image](https://github.com/user-attachments/assets/21adb915-11f3-42d0-a3aa-d1b67550cc83)
 Interpretation of the Decision Tree
 
